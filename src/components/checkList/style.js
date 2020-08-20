@@ -36,3 +36,16 @@ export const Input = styled.input`
 export const DivChecklistSelector = styled.div`
   display: flex;
 `
+
+export const SpanInProgress = styled.span`
+  background: #f5f3ed;
+  font-size: 13px;
+  padding: 3px;
+  border: 2px solid #eddfb9;
+`
+export const SpanSkiped = styled.span`
+  color: #e0e0e0;
+`
+export const UlAdditional = styled.ul`
+  list-style-type: none;
+`
