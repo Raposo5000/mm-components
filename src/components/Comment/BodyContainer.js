@@ -13,6 +13,7 @@ const BodyContainer = () => {
     <div>
       <BodyContainerStyle>
         <TextareaComponent
+          cols='60'
           placeholder='Insira um comentário sobre a tarefa (opcional)...'
           onChange={handleTextAreaChange}
         />

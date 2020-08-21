@@ -1,13 +1,13 @@
-import React from 'react'
 import {
-  Input,
   DivChecklistSelector,
+  Input,
   SpanInProgress,
   SpanSkiped,
   UlAdditional
 } from '../style'
+import React from 'react'
 
-const VERIFY_FIRST_ELEMENT_ROW_CHECKLIST = (text, index) => {
+const returnInputs = (text, index, handleChangeInput) => {
   const firstCharacter = text
 
   switch (firstCharacter[0]) {
@@ -16,15 +16,23 @@ const VERIFY_FIRST_ELEMENT_ROW_CHECKLIST = (text, index) => {
     case '-': // ToDo Item
       return (
         <DivChecklistSelector>
-          <Input type='checkbox' id={`${index}input`} />
-          <label for={`${index}input`}> {text.substring(2)}</label>
+          <Input
+            type='checkbox'
+            id={`${index}input`}
+            onChange={e => handleChangeInput(e, index)}
+          />
+          <label htmlFor={`${index}input`}> {text.substring(2)}</label>
         </DivChecklistSelector>
       )
     case '~': // In Progress
       return (
         <DivChecklistSelector>
-          <Input type='checkbox' id={`${index}input`} />
-          <label for={`${index}input`}>
+          <Input
+            type='checkbox'
+            id={`${index}input`}
+            onChange={e => handleChangeInput(e, index)}
+          />
+          <label htmlFor={`${index}input`}>
             <SpanInProgress>EM PROGRESSO</SpanInProgress> {text.substring(2)}
           </label>
         </DivChecklistSelector>
@@ -32,8 +40,13 @@ const VERIFY_FIRST_ELEMENT_ROW_CHECKLIST = (text, index) => {
     case '+': // Done Item
       return (
         <DivChecklistSelector>
-          <Input type='checkbox' defaultChecked id={`${index}input`} />
-          <label for={`${index}input`}>
+          <Input
+            type='checkbox'
+            defaultChecked
+            id={`${index}input`}
+            onChange={e => handleChangeInput(e, index)}
+          />
+          <label htmlFor={`${index}input`}>
             {' '}
             <strike>{text.substring(2)}</strike>
           </label>
@@ -42,8 +55,13 @@ const VERIFY_FIRST_ELEMENT_ROW_CHECKLIST = (text, index) => {
     case 'x': // Skiped
       return (
         <DivChecklistSelector>
-          <Input type='checkbox' disabled id={`${index}input`} />
-          <label for={`${index}input`}>
+          <Input
+            type='checkbox'
+            disabled
+            id={`${index}input`}
+            onChange={e => handleChangeInput(e, index)}
+          />
+          <label htmlFor={`${index}input`}>
             {' '}
             <SpanSkiped>{text.substring(2)}</SpanSkiped>
           </label>
@@ -54,7 +72,7 @@ const VERIFY_FIRST_ELEMENT_ROW_CHECKLIST = (text, index) => {
         <DivChecklistSelector>
           <UlAdditional>
             <li>
-              <label for={`${index}input`}> {text.substring(2)}</label>
+              <label htmlFor={`${index}input`}> {text.substring(2)}</label>
             </li>
           </UlAdditional>
         </DivChecklistSelector>
@@ -64,13 +82,4 @@ const VERIFY_FIRST_ELEMENT_ROW_CHECKLIST = (text, index) => {
   }
 }
 
-const returnComponentsCheckList = itensChecklist => {
-  return itensChecklist.map((el, index) => (
-    <div key={index}>
-      {VERIFY_FIRST_ELEMENT_ROW_CHECKLIST(el, index)}
-      <br />
-    </div>
-  ))
-}
-
-export default returnComponentsCheckList
+export default returnInputs
