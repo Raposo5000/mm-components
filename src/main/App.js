@@ -4,7 +4,8 @@ import React from 'react'
 // import Comment from '../components/Comment/'
 // import Checklist from '../components/checkList'
 // import CardsGroup from '../components/CardsGroup/Index'
-import ScreenLunchTime from '../components/ScreenLunchTime/Index'
+// import ScreenLunchTime from '../components/ScreenLunchTime/Index'
+import ScreenExitTime from '../components/ScreenExitTime/Index'
 
 function App () {
   return (
@@ -14,7 +15,8 @@ function App () {
       {/* <Comment /> */}
       {/* <Checklist /> */}
       {/* <CardsGroup /> */}
-      <ScreenLunchTime />
+      {/* <ScreenLunchTime /> */}
+      <ScreenExitTime />
     </div>
   )
 }
