@@ -8,8 +8,8 @@ const ScreenLunchTime = () => {
       <BodyContainer>
         <h4>Horário de almoço. Deseja encerrar a tarefa?</h4>
         <DivBottomButtons>
-          <Button type='no'>Não</Button>
-          <Button type='yes'>Sim</Button>
+          <Button type='no'>NÃO</Button>
+          <Button type='yes'>SIM</Button>
         </DivBottomButtons>
       </BodyContainer>
     </Card>

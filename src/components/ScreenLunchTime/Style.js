@@ -11,18 +11,24 @@ export const BodyContainer = styled.div`
 export const DivBottomButtons = styled.div`
   margin-top: 2rem;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 `
 export const Button = styled.button`
   margin-left: 1rem;
-  padding: 0.4rem 1.2rem;
+  padding: 0.6rem 1.2rem;
   color: black;
-  border: none;
-  background: ${(props) => props.type === 'yes' ? '#1ac773' : '#d95555'};
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: solid 2px ${props => (props.type === 'yes' ? '#1ac773' : '#d95555')};
+  color: whitesmoke;
+  border-radius: 0.2rem;
+  background: ${props => (props.type === 'yes' ? '#1ac773' : '#d95555')};
   cursor: pointer;
   transition: 0.2s;
 
   &:hover {
-    opacity: 0.7;
+    background-color: #ededed;
+    color: ${props => (props.type === 'yes' ? '#1ac773' : '#d95555')};
+    /* opacity: 0.7; */
   }
 `
