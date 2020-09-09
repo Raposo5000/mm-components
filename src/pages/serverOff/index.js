@@ -8,7 +8,7 @@ import {
   DivText
 } from './style'
 import './css.css'
-
+// teste
 const Index = () => {
   React.useEffect(() => {
     setInterval(() => console.log('Redireciona para outra página'), 5000)
