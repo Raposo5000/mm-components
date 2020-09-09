@@ -7,14 +7,15 @@ export const LogoutIcon = styled.div`
   height: 2.5rem;
   width: 2.5rem;
   margin-right: 0.7rem;
-  filter: invert(51%) sepia(5%) saturate(94%) hue-rotate(62deg) brightness(88%)
-    contrast(87%);
+  margin-left: 0.7rem;
+  filter: invert(42%) sepia(66%) saturate(6383%) hue-rotate(342deg) brightness(128%) contrast(99%);
   transition: 0.1s;
   cursor: pointer;
+  transform: rotateY(150deg);
 
   &:hover {
-    filter: invert(50%) sepia(62%) saturate(3492%) hue-rotate(156deg)
-      brightness(99%) contrast(101%);
-    transform: scale(1.2, 1.2);
+    filter: invert(12%) sepia(93%) saturate(7493%) hue-rotate(357deg)
+      brightness(93%) contrast(116%);
+    transform: scale(1.2, 1.2) rotateY(150deg);
   }
 `

@@ -8,9 +8,9 @@ import { MenuContainer } from './style'
 const Index = () => {
   return (
     <MenuContainer>
+      <LogoutItem />
       <JiraItem />
       <SettingsItem />
-      <LogoutItem />
       <Groups />
     </MenuContainer>
   )

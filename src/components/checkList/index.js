@@ -1,8 +1,5 @@
 import React from 'react'
-import {
-  ButtonCheck,
-  Dropdown
-} from './style'
+import { ButtonCheck, Dropdown } from './style'
 import testChecklistText from './checklistText'
 import returnInputs from './utils/returnInputs'
 
@@ -42,6 +39,24 @@ const CheckList = () => {
     ))
   }
 
+  const verifyAmountOfChecklist = () => {
+    let max = 0
+    let checked = 0
+    const arrayText = testChecklistText.trim().split('\n')
+    arrayText.map(el => {
+      if (el[0] === '+') {
+        checked = checked + 1
+        max = max + 1
+      } else if (el[0] === '-') {
+        max = max + 1
+      } else if (el[0] === '~') {
+        max = max + 1
+      }
+    })
+
+    return `${checked}/${max}`
+  }
+
   return (
     <div style={{ marginLeft: '40px', marginTop: '20px' }}>
       <br />
@@ -51,11 +66,11 @@ const CheckList = () => {
           setIsOpened(!isOpened)
         }}
       >
-        1/5
+        {verifyAmountOfChecklist()}
       </ButtonCheck>
       <Dropdown isOpened={isOpened}>
         {itensChecklist === [] ? '' : returnComponentsCheckList(itensChecklist)}
-        <button onClick={() => sendChecklist()}>Salvar</button>
+        <ButtonCheck onClick={() => sendChecklist()}>Salvar</ButtonCheck>
       </Dropdown>
     </div>
   )
