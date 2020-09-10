@@ -6,12 +6,13 @@ import React from 'react'
 // import CardsGroup from '../components/CardsGroup/Index'
 // import ScreenLunchTime from '../components/ScreenLunchTime/Index'
 // import ScreenExitTime from '../components/ScreenExitTime/Index'
-import ServerOffScreen from '../pages/serverOff'
+// import ServerOffScreen from '../pages/serverOff'
+import ProgressBar from '../components/ProgressBar'
 
 function App () {
   return (
     <div>
-      <ServerOffScreen />
+      {/* <ServerOffScreen /> */}
       {/* <Menu /> */}
       {/* <Configuration /> */}
       {/* <Comment /> */}
@@ -19,6 +20,7 @@ function App () {
       {/* <CardsGroup /> */}
       {/* <ScreenLunchTime showing={false || true}/> */}
       {/* <ScreenExitTime /> */}
+      <ProgressBar/>
     </div>
   )
 }
