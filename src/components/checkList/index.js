@@ -4,7 +4,7 @@ import testChecklistText from './checklistText'
 import returnInputs from './utils/returnInputs'
 
 const CheckList = () => {
-  const [isOpened, setIsOpened] = React.useState(false)
+  const [isDropdownOpened, setIDropdownsOpened] = React.useState(false)
   const [itensChecklist, setItensChecklist] = React.useState([])
   const [checklistToSend, setChecklistToSend] = React.useState(null)
 
@@ -27,7 +27,7 @@ const CheckList = () => {
   const sendChecklist = () => {
     const formatedTextChecklist = checklistToSend.join('\\n')
     console.log(formatedTextChecklist)
-    setIsOpened(false)
+    setIDropdownsOpened(false)
   }
 
   const returnComponentsCheckList = (itensChecklist, createItensChecklist) => {
@@ -63,12 +63,12 @@ const CheckList = () => {
       <ButtonCheck
         onClick={() => {
           createItensChecklist(testChecklistText)
-          setIsOpened(!isOpened)
+          setIDropdownsOpened(!isDropdownOpened)
         }}
       >
         {verifyAmountOfChecklist()}
       </ButtonCheck>
-      <Dropdown isOpened={isOpened}>
+      <Dropdown isOpened={isDropdownOpened}>
         {itensChecklist === [] ? '' : returnComponentsCheckList(itensChecklist)}
         <ButtonCheck onClick={() => sendChecklist()}>Salvar</ButtonCheck>
       </Dropdown>

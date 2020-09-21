@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.form-send-photo {
+  
+}
+
+.header-input {
+  
+}
+
+.input-text-form {
+  font-size: 1.2rem;
+  padding: 0.4rem;
+  border: solid 1px var(--blue);
+  border-radius: 0.2rem;
+}
+
+
+
+.div-select-image {
+  margin-top: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.div-select-image input {
+  display: none;
+}
+
+.div-select-image label {
+  background-color: #3498db;
+  padding: 0.4rem;
+  color: white;
+  cursor: pointer;
+}
+
+.div-select-image label:hover {
+  opacity: 0.8;
+}
+
+.input-button-send {
+  padding: 0.4rem;
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  border-radius: 0.3rem;
+  border: 1px solid var(--blue);
+  color: white;
+  background: #3498db;
+  cursor: pointer;
+  /* background: blue; */
+}
+
+.input-button-send:hover {
+  opacity: 0.8;
+  /* background: white; */
+}

@@ -7,7 +7,8 @@ import React from 'react'
 // import ScreenLunchTime from '../components/ScreenLunchTime/Index'
 // import ScreenExitTime from '../components/ScreenExitTime/Index'
 // import ServerOffScreen from '../pages/serverOff'
-import ProgressBar from '../components/ProgressBar'
+// import ProgressBar from '../components/ProgressBar'
+import UploadImage from '../components/UploadImage'
 
 function App () {
   return (
@@ -20,7 +21,8 @@ function App () {
       {/* <CardsGroup /> */}
       {/* <ScreenLunchTime showing={false || true}/> */}
       {/* <ScreenExitTime /> */}
-      <ProgressBar/>
+      {/* <ProgressBar/> */}
+      <UploadImage />
     </div>
   )
 }
